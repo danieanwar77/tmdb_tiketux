@@ -450,7 +450,7 @@ class DetailScreen extends StatelessWidget{
                 ),
                 SizedBox(
                   width: double.infinity,
-                  height: 200.w,
+                  height: 210.w,
                   child: ListView.builder(
                       shrinkWrap: true,
                       itemCount: controller.reviews.results != null ? controller.reviews.results?.length : 6,
@@ -498,7 +498,7 @@ class DetailScreen extends StatelessWidget{
                                             margin: EdgeInsets.only(left: 16, bottom: 16),
                                             padding: EdgeInsets.all(11),
                                             decoration: BoxDecoration(
-                                                color: controller.detail.voteAverage! < 8 ? surveyProgressColor : gradation3,
+                                                color: controller.reviews.results![index].authorDetails!.rating != null ? controller.reviews.results![index].authorDetails!.rating! < 8 ? surveyProgressColor : gradation3 : surveyProgressColor,
                                                 borderRadius: BorderRadius.circular(80)
                                             ),
                                             child: Row(

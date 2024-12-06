@@ -17,7 +17,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   flutter_html: any
   flutter_launcher_icons: ^0.13.1
-  flutter_local_notifications: ^17.1.2
+#  flutter_local_notifications: ^17.1.2
   flutter_rating_bar: ^4.0.1
   flutter_native_splash: ^2.4.0
   flutter_inappwebview: ^6.0.0
@@ -46,11 +46,11 @@ dependencies:
   path: any
   infinite_scroll_pagination: ^4.0.0
   permission_handler: any
-  google_mlkit_face_detection: ^0.11.0
+#  google_mlkit_face_detection: ^0.11.0
   percent_indicator: ^4.2.3
   timezone: any
   shimmer: ^3.0.0
-  file_picker: ^8.0.3
+#  file_picker: ^8.0.3
   image_picker: ^1.1.1
   overlay_support: ^2.1.0
   flutter_alice: ^1.1.1

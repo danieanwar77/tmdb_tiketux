@@ -109,45 +109,50 @@ class ArchiveScreen extends StatelessWidget{
                                     children: [
                                       ClipRRect(
                                           borderRadius: BorderRadius.circular(16),
-                                          child: IntrinsicHeight(
-                                            child: Stack(
-                                              children: [
-                                                Image.network('${AppConstant.IMAGE_URL}${item.backdropPath}'),
-                                                Align(
-                                                  alignment: Alignment.topRight,
-                                                  child: UnconstrainedBox(
-                                                    child: Container(
-                                                      margin: EdgeInsets.only(right: 16, top: 16),
-                                                      padding: EdgeInsets.all(8),
-                                                      decoration: BoxDecoration(
-                                                          color: item.voteAverage! < 8 ? surveyProgressColor : gradation3,
-                                                          borderRadius: BorderRadius.circular(8.w)
-                                                      ),
-                                                      child: Row(
-                                                        children: [
-                                                          Image.asset('assets/icons/rate.png',
-                                                            height: 9.w,
-                                                            color: Colors.black,
-                                                          ),
-                                                          SizedBox(width: 4,),
-                                                          Text('${(item.voteAverage! * 10).toString().substring(0,2)}',
-                                                            style: TextStyle(
-                                                                fontSize: 10.sp,
-                                                                fontWeight: FontWeight.bold
+                                          child: InkWell(
+                                            onTap: (){
+
+                                            },
+                                            child: IntrinsicHeight(
+                                              child: Stack(
+                                                children: [
+                                                  Image.network('${AppConstant.IMAGE_URL}${item.backdropPath}'),
+                                                  Align(
+                                                    alignment: Alignment.topRight,
+                                                    child: UnconstrainedBox(
+                                                      child: Container(
+                                                        margin: EdgeInsets.only(right: 16, top: 16),
+                                                        padding: EdgeInsets.all(8),
+                                                        decoration: BoxDecoration(
+                                                            color: item.voteAverage! < 8 ? surveyProgressColor : gradation3,
+                                                            borderRadius: BorderRadius.circular(8.w)
+                                                        ),
+                                                        child: Row(
+                                                          children: [
+                                                            Image.asset('assets/icons/rate.png',
+                                                              height: 9.w,
+                                                              color: Colors.black,
                                                             ),
-                                                          ),
-                                                          Text('%',
-                                                            style: TextStyle(
-                                                                fontSize: 10.sp,
-                                                                fontWeight: FontWeight.bold
+                                                            SizedBox(width: 4,),
+                                                            Text('${(item.voteAverage! * 10).toString().substring(0,2)}',
+                                                              style: TextStyle(
+                                                                  fontSize: 10.sp,
+                                                                  fontWeight: FontWeight.bold
+                                                              ),
                                                             ),
-                                                          )
-                                                        ],
+                                                            Text('%',
+                                                              style: TextStyle(
+                                                                  fontSize: 10.sp,
+                                                                  fontWeight: FontWeight.bold
+                                                              ),
+                                                            )
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
-                                                  ),
-                                                )
-                                              ],
+                                                  )
+                                                ],
+                                              ),
                                             ),
                                           )
                                       ),
